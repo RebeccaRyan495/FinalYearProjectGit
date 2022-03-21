@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    class ISubject
+    public interface ISubject
     {
     }
 }

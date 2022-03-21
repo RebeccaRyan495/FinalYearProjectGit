@@ -43,11 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Admin.cs" />
+    <Compile Include="DataDevice.cs" />
+    <Compile Include="IAdmin.cs" />
+    <Compile Include="IDataDevice.cs" />
+    <Compile Include="IQuestion.cs" />
+    <Compile Include="ISubject.cs" />
+    <Compile Include="ITest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="Question.cs" />
+    <Compile Include="Subject.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

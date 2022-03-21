@@ -6,7 +6,36 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    class Question
+    public class Question: IQuestion
     {
+        #region Instance Properties
+
+        private string questionID;
+        private string question;
+        #endregion
+
+        public string QuestionID
+        {
+            get
+            {
+                return questionID;
+            }
+            set
+            {
+                questionID = value;
+            }
+        }
+
+        public string AQuestion
+        {
+            get
+            {
+                return question;
+            }
+            set
+            {
+                question = value;
+            }
+        }
     }
 }

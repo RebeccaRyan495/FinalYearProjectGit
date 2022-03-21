@@ -22,5 +22,10 @@ namespace PolygraphGUIFeb
             string username = txtUsername.Text;
             string password = txtPassword.Text;
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

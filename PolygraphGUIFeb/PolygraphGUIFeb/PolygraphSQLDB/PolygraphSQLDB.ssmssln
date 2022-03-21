@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "PolygraphSQLDB", "PolygraphSQLDB\PolygraphSQLDB.ssmssqlproj", "{3922FD30-E516-4EC1-9817-0BC2DDAD82FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3922FD30-E516-4EC1-9817-0BC2DDAD82FC}.Default|Default.ActiveCfg = Default
+		{B33A2BDA-72C1-4B4B-92B0-11A5577A3982}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51AB30B0-B5AF-45ED-8AB5-16CED8071CC5}
+	EndGlobalSection
+EndGlobal

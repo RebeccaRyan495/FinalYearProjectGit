@@ -6,7 +6,50 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    class Test
+   public class Test: ITest
     {
+        #region Instance Properties
+
+        private string testID;
+        private string testDuration;
+        private int criminal;
+
+        #endregion
+
+        public string TestID
+        {
+            get
+            {
+                return testID;
+            }
+            set
+            {
+                testID = value;
+            }
+        }
+
+        public string TestDuration
+        {
+            get
+            {
+                return testDuration;
+            }
+            set
+            {
+                testDuration = value;
+            }
+        }
+
+        public int Criminal
+        {
+            get
+            {
+                return criminal;
+            }
+            set
+            {
+                criminal = value;
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class IAdmin
+    public interface IAdmin
     {
     }
 }
