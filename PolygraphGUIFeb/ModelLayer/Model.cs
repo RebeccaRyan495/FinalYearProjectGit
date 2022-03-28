@@ -19,7 +19,7 @@ namespace ModelLayer
 
         #region Instance Attributes
         private IDataLayer dataLayer;
-        private Admin admin;
+        //private Admin admin;
         private List<IAdmin> adminList;
         private ArrayList subjectList;
         #endregion
@@ -58,7 +58,6 @@ namespace ModelLayer
         }
         private Model(IDataLayer _DataLayer)  // The constructor is private as its a singleton and I only allow one instance which is created with the GetInstance() method
         {
-            adminList = new ArrayList();
             dataLayer = _DataLayer;
             adminList = dataLayer.getAllAdmin(); // setup Models userList so we can login
         }

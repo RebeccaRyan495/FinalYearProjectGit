@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess;
+using ModelLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +16,12 @@ namespace PolygraphGUIFeb
         [STAThread]
         static void Main()
         {
+            IDataLayer _Datalayer = DataLayer.GetInstance();  // DataLayer object is a singleton, only 1 instance allowed. With Songleton pattern use GetInstance() method to create it.
+            IModel _Model = Model.GetInstance(_Datalayer);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormContainer(_Model));
+
         }
     }
 }

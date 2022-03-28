@@ -1,11 +1,11 @@
 import socket                
 
-s = socket.socket()          
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)          
 print ("Socket successfully created")
 
 port = 12345                
 
-s.bind(('192.168.8.130', port))         
+s.bind(('', port))         
 print("socket binded to %s" %(port))
 
 s.listen(5)      

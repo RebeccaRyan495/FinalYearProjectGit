@@ -1,0 +1,5 @@
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\BusinessEntities\bin\Debug\BusinessEntities.dll
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\BusinessEntities\bin\Debug\BusinessEntities.pdb
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\BusinessEntities\obj\Debug\BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\BusinessEntities\obj\Debug\BusinessEntities.dll
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\BusinessEntities\obj\Debug\BusinessEntities.pdb

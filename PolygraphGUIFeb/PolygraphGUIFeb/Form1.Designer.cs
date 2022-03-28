@@ -1,6 +1,6 @@
 ﻿namespace PolygraphGUIFeb
 {
-    partial class Form1
+    partial class FormContainer
     {
         /// <summary>
         /// Required designer variable.

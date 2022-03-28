@@ -46,11 +46,11 @@ namespace DataAccess
         public void openConnection()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Server=localhost;Database=polygraphdb;User Id=root;Password='';";
-            //con.ConnectionString = "Data Source=BDEV2 ;Initial Catalog=ProductTracker;Integrated Security=True";
-            /*       con.ConnectionString = "Data Source=SQL02.student.litdom.lit.ie\\SD3A ;Initial Catalog=ProductTracker;Integrated Security=True";
-                     This last conection string is for SQL02.student.litdom.lit.ie\SD3A  Note the extra (slash)\ in the code. This is needed in the lab 
-                     for the extra instances Annette Bowman sets up on the CS SQL Server*/
+            //con.ConnectionString = "Server=MSSQLSERVER01;Database=PolygraphDB;Initial Catalog=PolygraphDB;Integrated Security=true;uid=root;pwd='';";
+            con.ConnectionString = @"Data Source=localhost\MSSQLSERVER01; Initial Catalog=polygraphdb; Integrated Security=True";
+
+           // ConnectionState.ConnectionString = @"Data Source=localhost;Initial Catalog=myNFCdb;Integrated Security=True";
+
             try
             {
                 con.Open();
@@ -59,6 +59,7 @@ namespace DataAccess
             catch (System.Exception excep)
             {
                 MessageBox.Show(excep.Message);
+                MessageBox.Show("Cannot connect to database");
                 Environment.Exit(0); //Force the application to close
             }
         }
@@ -74,9 +75,9 @@ namespace DataAccess
         }
 
 
-        public ArrayList getAllAdmin()
+        public virtual List<IAdmin> getAllAdmin()
         {
-            ArrayList adminList = new ArrayList();
+            List<IAdmin> adminList = new List<IAdmin>();
 
             try
             {

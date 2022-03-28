@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessEntities;
+using ModelLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,17 +12,27 @@ using System.Windows.Forms;
 
 namespace PolygraphGUIFeb
 {
-    public partial class Form1 : Form
+    public partial class FormContainer : Form
     {
-        public Form1()
+        private IModel Model;
+
+        public FormContainer(IModel _Model)
         {
             InitializeComponent();
+            Model = _Model;
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Model.GetAllAdmin();
             string username = txtUsername.Text;
             string password = txtPassword.Text;
+
+            foreach (IAdmin admin in Model.AdminList)
+            {
+                MessageBox.Show(admin.AdminFirstName.ToString());
+            }
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
