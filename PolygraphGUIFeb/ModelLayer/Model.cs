@@ -95,6 +95,15 @@ namespace ModelLayer
             }
             return false;
         }
+
+        public bool deleteSubject(ISubject sub)
+        {
+
+            DataLayer.deleteSubject(sub);
+            SubjectList.Remove(sub); //remove object from collection
+            return true;
+
+        }
         public Boolean addSubject(string SubjectFName, string SubjectLName, int Incarceration, int PreviousTests, string SubjectAddress, string CustodianName)
         {
             try

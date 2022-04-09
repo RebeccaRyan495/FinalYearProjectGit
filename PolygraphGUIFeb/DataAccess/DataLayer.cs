@@ -117,6 +117,33 @@ namespace DataAccess
 
         }
 
+        public bool deleteSubject(BusinessEntities.ISubject sub)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Subject";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "SubjectData");
+                DataRow findRow = ds.Tables["SubjectData"].Rows.Find(sub.SubjectID);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "SubjectData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                Application.Exit();
+            }
+            return true;
+        }
+
 
         public virtual List<IAdmin> getAllAdmin()
         {

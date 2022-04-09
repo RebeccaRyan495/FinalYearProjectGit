@@ -19,6 +19,7 @@ namespace ModelLayer
 
         void GetAllSubjects();
         void GetAllQuestions();
+        bool deleteSubject(ISubject subject);
 
         Boolean addSubject(string SubjectFName, string SubjectLName, int Incarceration, int PreviousTests, string SubjectAddress, string CustodianName);
         Boolean addQuestion(string Question);

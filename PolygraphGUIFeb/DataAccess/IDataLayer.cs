@@ -18,5 +18,6 @@ namespace DataAccess
         List<ISubject> getAllSubjects();
         void addSubject(ISubject subject);
         void addQuestion(IQuestion question);
+        bool deleteSubject(ISubject subject);
     }
 }

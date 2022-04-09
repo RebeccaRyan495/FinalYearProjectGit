@@ -48,6 +48,10 @@ namespace PolygraphGUIFeb
                     {
                         MessageBox.Show("Subject Added");
                     }
+                    this.Hide();
+                    FormViewSubjects ff = new FormViewSubjects(Model);
+                    ff.ShowDialog();
+                    this.Close();
                 }
             }
             else
