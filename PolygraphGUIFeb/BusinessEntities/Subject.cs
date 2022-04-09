@@ -17,6 +17,8 @@ namespace BusinessEntities
         private int previousTests;
         private string subjectAddress;
         private string custodianName;
+
+        
         #endregion
 
         public string SubjectID
@@ -101,6 +103,16 @@ namespace BusinessEntities
             {
                 custodianName = value;
             }
+        }
+        public Subject(string subjectID, string subjectFirstName, string subjectLastName, int incarceration, int previousTests, string subjectAddress, string custodianName)
+        {
+            this.subjectID = subjectID;
+            this.subjectFirstName = subjectFirstName;
+            this.subjectLastName = subjectLastName;
+            this.incarceration = incarceration;
+            this.previousTests = previousTests;
+            this.subjectAddress = subjectAddress;
+            this.custodianName = custodianName;
         }
     }
 }

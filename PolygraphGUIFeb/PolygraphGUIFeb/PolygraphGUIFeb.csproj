@@ -62,6 +62,48 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddCustomQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCustomQuestion.Designer.cs">
+      <DependentUpon>FormAddCustomQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSubject.Designer.cs">
+      <DependentUpon>FormAddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfirmAddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfirmAddSubject.Designer.cs">
+      <DependentUpon>FormConfirmAddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfirmQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfirmQuestion.Designer.cs">
+      <DependentUpon>FormConfirmQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainMenu.Designer.cs">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewQuestions.Designer.cs">
+      <DependentUpon>FormViewQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewSubjects.Designer.cs">
+      <DependentUpon>FormViewSubjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="polygraphdbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +113,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddCustomQuestion.resx">
+      <DependentUpon>FormAddCustomQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddSubject.resx">
+      <DependentUpon>FormAddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirmAddSubject.resx">
+      <DependentUpon>FormConfirmAddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirmQuestion.resx">
+      <DependentUpon>FormConfirmQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainMenu.resx">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewQuestions.resx">
+      <DependentUpon>FormViewQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewSubjects.resx">
+      <DependentUpon>FormViewSubjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,5 +8,7 @@ namespace BusinessEntities
 {
     public interface IQuestion
     {
+        string QuestionID { get; set; }
+        string AQuestion { get; set; }
     }
 }

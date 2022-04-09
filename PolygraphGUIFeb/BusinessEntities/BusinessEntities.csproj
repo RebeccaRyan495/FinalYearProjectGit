@@ -57,7 +57,9 @@
     <Compile Include="program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
+    <Compile Include="QuestionMethods.cs" />
     <Compile Include="Subject.cs" />
+    <Compile Include="SubjectMethods.cs" />
     <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

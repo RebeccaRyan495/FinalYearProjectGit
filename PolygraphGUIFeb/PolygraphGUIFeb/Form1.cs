@@ -29,10 +29,23 @@ namespace PolygraphGUIFeb
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            foreach (IAdmin admin in Model.AdminList)
+            bool validUser = Model.login(username, password);
+
+            if (validUser)
             {
-                MessageBox.Show(admin.AdminFirstName.ToString());
+                MessageBox.Show("Login Successful");
+                this.Hide();
+                FormMainMenu frmMM = new FormMainMenu(Model);
+                frmMM.ShowDialog();
+                this.Close();
             }
+            else
+            {
+                MessageBox.Show("Invalid name or password");
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+            }
+
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

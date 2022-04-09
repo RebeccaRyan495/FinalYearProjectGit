@@ -30,3 +30,10 @@ C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\Polyg
 C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\bin\Debug\System.Buffers.dll
 C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\bin\Debug\MySql.Data.xml
 C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.exe.config
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormMainMenu.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormViewSubjects.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormViewQuestions.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormAddSubject.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormConfirmAddSubject.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormAddCustomQuestion.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormConfirmQuestion.resources

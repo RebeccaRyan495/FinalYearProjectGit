@@ -13,5 +13,14 @@ namespace ModelLayer
 
         List<IAdmin> AdminList { get; set; }
         void GetAllAdmin();
+        bool login(string username, string password);
+        List<ISubject> SubjectList { get; set; }
+        List<IQuestion> QuestionList { get; set; }
+
+        void GetAllSubjects();
+        void GetAllQuestions();
+
+        Boolean addSubject(string SubjectFName, string SubjectLName, int Incarceration, int PreviousTests, string SubjectAddress, string CustodianName);
+        Boolean addQuestion(string Question);
     }
 }

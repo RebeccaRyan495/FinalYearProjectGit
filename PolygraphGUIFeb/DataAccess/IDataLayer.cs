@@ -14,5 +14,9 @@ namespace DataAccess
         void openConnection();
 
         List<IAdmin> getAllAdmin();
+        List<IQuestion> getAllQuestions();
+        List<ISubject> getAllSubjects();
+        void addSubject(ISubject subject);
+        void addQuestion(IQuestion question);
     }
 }

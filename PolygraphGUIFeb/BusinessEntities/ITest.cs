@@ -8,5 +8,8 @@ namespace BusinessEntities
 {
     public interface ITest
     {
+        string TestID { get; set; }
+        string TestDuration { get; set; }
+        int Criminal { get; set; }
     }
 }

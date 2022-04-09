@@ -12,6 +12,12 @@ namespace BusinessEntities
 
         private string questionID;
         private string question;
+
+        public Question(string questionID, string question)
+        {
+            this.questionID = questionID;
+            this.question = question;
+        }
         #endregion
 
         public string QuestionID

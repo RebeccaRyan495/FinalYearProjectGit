@@ -74,6 +74,49 @@ namespace DataAccess
             return con;
         }
 
+        public virtual List<ISubject> getAllSubjects()
+        {
+            List<ISubject> subjectList = new List<ISubject>();
+            DataSet ds;                 //Declare the DataSet object
+            SqlDataAdapter da;   //Declare the DataAdapter object
+            SqlCommandBuilder cb;
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Subject";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "SubjectData");
+                maxRows = ds.Tables["SubjectData"].Rows.Count;
+                for (int i = 0; i < maxRows; i++)
+                {
+                    DataRow dRow = ds.Tables["SubjectData"].Rows[i];
+                    ISubject subject = SubjectMethods.GetSubject(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString(),
+                                                        dRow.ItemArray.GetValue(2).ToString(),
+                                                         Convert.ToInt16(dRow.ItemArray.GetValue(3).ToString()),
+                                                         Convert.ToInt16(dRow.ItemArray.GetValue(4).ToString()),
+                                                        dRow.ItemArray.GetValue(5).ToString(),
+                                                        dRow.ItemArray.GetValue(6).ToString());
+                    subjectList.Add(subject);
+                    //MessageBox.Show(user.Username + user.Password);
+
+                    //textBoxName.Select();
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+
+            return subjectList;
+
+        }
+
 
         public virtual List<IAdmin> getAllAdmin()
         {
@@ -115,6 +158,107 @@ namespace DataAccess
 
             return adminList;
 
+        }
+
+        public virtual List<IQuestion> getAllQuestions()
+        {
+            List<IQuestion> questionList = new List<IQuestion>();
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Question";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "QuestionData");
+                maxRows = ds.Tables["QuestionData"].Rows.Count;
+                for (int i = 0; i < maxRows; i++)
+                {
+                    DataRow dRow = ds.Tables["QuestionData"].Rows[i];
+                    IQuestion question = QuestionMethods.GetQuestion(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString());
+                    questionList.Add(question);
+                    //MessageBox.Show(user.Username + user.Password);
+
+                    //textBoxName.Select();
+                }
+
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+
+
+
+            return questionList;
+
+        }
+
+        public virtual void addSubject(ISubject subject)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Subject";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "SubjectData");
+                maxRows = ds.Tables["SubjectData"].Rows.Count;
+                DataRow dRow = ds.Tables["SubjectData"].NewRow();
+                dRow[0] = subject.SubjectID;
+                dRow[1] = subject.SubjectFirstName;
+                dRow[2] = subject.SubjectLastName;
+                dRow[3] = subject.Incarceration;
+                dRow[4] = subject.PreviousTests;
+                dRow[5] = subject.SubjectAddress;
+                dRow[6] = subject.CustodianName;
+
+
+
+                ds.Tables["SubjectData"].Rows.Add(dRow);
+                da.Update(ds, "SubjectData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message, "Unable to add Subject to database");
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+            }
+        }
+
+        public virtual void addQuestion(IQuestion question)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Question";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "QuestionData");
+                maxRows = ds.Tables["QuestionData"].Rows.Count;
+                DataRow dRow = ds.Tables["QuestionData"].NewRow();
+                dRow[0] = question.QuestionID;
+                dRow[1] = question.AQuestion;
+
+
+
+
+                ds.Tables["QuestionData"].Rows.Add(dRow);
+                da.Update(ds, "QuestionData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message, "Unable to add Question to database");
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+            }
         }
     }
 }
