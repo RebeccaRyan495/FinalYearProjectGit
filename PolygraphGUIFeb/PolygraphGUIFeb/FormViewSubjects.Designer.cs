@@ -47,6 +47,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tbCustName = new System.Windows.Forms.TextBox();
             this.btnDeleteSub = new System.Windows.Forms.Button();
+            this.btnEditSub = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbSubID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,12 +223,42 @@
             this.btnDeleteSub.UseVisualStyleBackColor = true;
             this.btnDeleteSub.Click += new System.EventHandler(this.btnDeleteSub_Click);
             // 
+            // btnEditSub
+            // 
+            this.btnEditSub.Location = new System.Drawing.Point(684, 550);
+            this.btnEditSub.Name = "btnEditSub";
+            this.btnEditSub.Size = new System.Drawing.Size(155, 41);
+            this.btnEditSub.TabIndex = 22;
+            this.btnEditSub.Text = "Edit Subject";
+            this.btnEditSub.UseVisualStyleBackColor = true;
+            this.btnEditSub.Click += new System.EventHandler(this.btnEditSub_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(485, 146);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 20);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Subject ID";
+            // 
+            // tbSubID
+            // 
+            this.tbSubID.Location = new System.Drawing.Point(487, 169);
+            this.tbSubID.Name = "tbSubID";
+            this.tbSubID.ReadOnly = true;
+            this.tbSubID.Size = new System.Drawing.Size(155, 26);
+            this.tbSubID.TabIndex = 23;
+            // 
             // FormViewSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(909, 628);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.tbSubID);
+            this.Controls.Add(this.btnEditSub);
             this.Controls.Add(this.btnDeleteSub);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbCustName);
@@ -275,5 +308,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbCustName;
         private System.Windows.Forms.Button btnDeleteSub;
+        private System.Windows.Forms.Button btnEditSub;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbSubID;
     }
 }

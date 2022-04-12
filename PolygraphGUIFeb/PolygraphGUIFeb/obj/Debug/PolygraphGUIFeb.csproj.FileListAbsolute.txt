@@ -37,3 +37,11 @@ C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\Polyg
 C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormConfirmAddSubject.resources
 C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormAddCustomQuestion.resources
 C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormConfirmQuestion.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormConfigSubject.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormEditSubject.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormEditSubject.aa.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\bin\Debug\aa\PolygraphGUIFeb.resources.dll
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\aa\PolygraphGUIFeb.resources.dll
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormUpdateCredentials.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.Configuration.resources
+C:\Users\rebec\OneDrive\Desktop\latest\FinalYearProjectGit\PolygraphGUIFeb\PolygraphGUIFeb\obj\Debug\PolygraphGUIFeb.FormExamSelectSubject.resources

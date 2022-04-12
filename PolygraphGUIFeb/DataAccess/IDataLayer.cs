@@ -19,5 +19,7 @@ namespace DataAccess
         void addSubject(ISubject subject);
         void addQuestion(IQuestion question);
         bool deleteSubject(ISubject subject);
+        bool updateSubject(ISubject subject);
+        bool updateAdmin(IAdmin admin);
     }
 }

@@ -10,7 +10,7 @@ using BusinessEntities;
 
 namespace DataAccess
 {
-    public class DataLayer:IDataLayer
+    public class DataLayer : IDataLayer
     {
 
         #region Instance Attributes
@@ -49,7 +49,7 @@ namespace DataAccess
             //con.ConnectionString = "Server=MSSQLSERVER01;Database=PolygraphDB;Initial Catalog=PolygraphDB;Integrated Security=true;uid=root;pwd='';";
             con.ConnectionString = @"Data Source=localhost\MSSQLSERVER01; Initial Catalog=polygraphdb; Integrated Security=True";
 
-           // ConnectionState.ConnectionString = @"Data Source=localhost;Initial Catalog=myNFCdb;Integrated Security=True";
+            // ConnectionState.ConnectionString = @"Data Source=localhost;Initial Catalog=myNFCdb;Integrated Security=True";
 
             try
             {
@@ -286,6 +286,75 @@ namespace DataAccess
                     con.Close();
                 Application.Exit();
             }
+        }
+
+        public virtual bool updateSubject(ISubject subject)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Subject";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "SubjectData");
+                DataRow findRow = ds.Tables["SubjectData"].Rows.Find(subject.SubjectID);
+                if (findRow != null)
+                {
+                    //findRow[0] = stockItem.ItemID;
+                    findRow[1] = subject.SubjectFirstName;
+                    findRow[2] = subject.SubjectLastName;
+                    findRow[3] = subject.Incarceration;
+                    findRow[4] = subject.PreviousTests;
+                    findRow[5] = subject.SubjectAddress;
+                    findRow[6] = subject.CustodianName;
+
+                }
+                da.Update(ds, "SubjectData"); //remove row from database table
+
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                Application.Exit();
+            }
+            return true;
+        }
+
+        public virtual bool updateAdmin(IAdmin admin)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Admin";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdminData");
+                DataRow findRow = ds.Tables["AdminData"].Rows.Find(admin.AdminID);
+                if (findRow != null)
+                {
+                    //findRow[0] = stockItem.ItemID;
+                    findRow[1] = admin.AdminFirstName;
+                    findRow[2] = admin.AdminLastName;
+                    findRow[3] = admin.UserName;
+                    findRow[4] = admin.Password;
+                }
+                da.Update(ds, "AdminData"); //remove row from database table
+
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                Application.Exit();
+            }
+            return true;
         }
     }
 }

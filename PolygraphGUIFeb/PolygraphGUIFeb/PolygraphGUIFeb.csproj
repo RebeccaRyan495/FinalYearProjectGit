@@ -74,6 +74,12 @@
     <Compile Include="FormAddSubject.Designer.cs">
       <DependentUpon>FormAddSubject.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConfigSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigSubject.Designer.cs">
+      <DependentUpon>FormConfigSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConfirmAddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,11 +92,35 @@
     <Compile Include="FormConfirmQuestion.Designer.cs">
       <DependentUpon>FormConfirmQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditSubject.Designer.cs">
+      <DependentUpon>FormEditSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExamConfigMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExamConfigMenu.Designer.cs">
+      <DependentUpon>FormExamConfigMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExamSelectSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExamSelectSubject.Designer.cs">
+      <DependentUpon>FormExamSelectSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateCredentials.Designer.cs">
+      <DependentUpon>FormUpdateCredentials.cs</DependentUpon>
     </Compile>
     <Compile Include="FormViewQuestions.cs">
       <SubType>Form</SubType>
@@ -120,14 +150,32 @@
     <EmbeddedResource Include="FormAddSubject.resx">
       <DependentUpon>FormAddSubject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConfigSubject.resx">
+      <DependentUpon>FormConfigSubject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConfirmAddSubject.resx">
       <DependentUpon>FormConfirmAddSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfirmQuestion.resx">
       <DependentUpon>FormConfirmQuestion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditSubject.aa.resx">
+      <DependentUpon>FormEditSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditSubject.resx">
+      <DependentUpon>FormEditSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExamConfigMenu.resx">
+      <DependentUpon>FormExamConfigMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExamSelectSubject.resx">
+      <DependentUpon>FormExamSelectSubject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateCredentials.resx">
+      <DependentUpon>FormUpdateCredentials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewQuestions.resx">
       <DependentUpon>FormViewQuestions.cs</DependentUpon>

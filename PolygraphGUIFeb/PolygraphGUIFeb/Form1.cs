@@ -28,6 +28,7 @@ namespace PolygraphGUIFeb
             Model.GetAllAdmin();
             string username = txtUsername.Text;
             string password = txtPassword.Text;
+            int counter = 3;
 
             bool validUser = Model.login(username, password);
 
@@ -41,9 +42,14 @@ namespace PolygraphGUIFeb
             }
             else
             {
+                counter--;
                 MessageBox.Show("Invalid name or password");
                 txtUsername.Text = "";
                 txtPassword.Text = "";
+                if(counter == 0)
+                {
+                    this.Close();
+                }
             }
 
         }

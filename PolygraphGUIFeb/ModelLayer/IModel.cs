@@ -23,5 +23,7 @@ namespace ModelLayer
 
         Boolean addSubject(string SubjectFName, string SubjectLName, int Incarceration, int PreviousTests, string SubjectAddress, string CustodianName);
         Boolean addQuestion(string Question);
+        bool UpdateSubject(ISubject subject);
+        bool UpdateAdmin(IAdmin admin);
     }
 }

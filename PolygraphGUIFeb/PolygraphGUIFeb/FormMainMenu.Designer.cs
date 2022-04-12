@@ -80,6 +80,7 @@
             this.btnExamConfig.TabIndex = 7;
             this.btnExamConfig.Text = "Configure Exam";
             this.btnExamConfig.UseVisualStyleBackColor = false;
+            this.btnExamConfig.Click += new System.EventHandler(this.btnExamConfig_Click);
             // 
             // btnViewSub
             // 
@@ -115,6 +116,7 @@
             this.btnUpdateInfo.TabIndex = 10;
             this.btnUpdateInfo.Text = "Update Credentials";
             this.btnUpdateInfo.UseVisualStyleBackColor = false;
+            this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateInfo_Click);
             // 
             // btnLogout
             // 

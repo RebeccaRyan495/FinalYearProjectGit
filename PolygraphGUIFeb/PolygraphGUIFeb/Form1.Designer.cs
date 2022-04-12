@@ -106,6 +106,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(474, 334);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(224, 35);
             this.txtPassword.TabIndex = 5;
             // 
@@ -121,7 +122,7 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // Form1
+            // FormContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +135,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "FormContainer";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

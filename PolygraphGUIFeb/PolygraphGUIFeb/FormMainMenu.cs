@@ -47,5 +47,22 @@ namespace PolygraphGUIFeb
             f.ShowDialog();
             this.Close();
         }
+
+        private void btnExamConfig_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Configuration fecm = new Configuration(Model);
+            fecm.ShowDialog();
+            this.Close();
+
+        }
+
+        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormUpdateCredentials fuc = new FormUpdateCredentials(Model);
+            fuc.ShowDialog();
+            this.Close();
+        }
     }
 }

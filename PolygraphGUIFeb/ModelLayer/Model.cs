@@ -150,6 +150,18 @@ namespace ModelLayer
             }
         }
 
+        public bool UpdateSubject(ISubject subject)
+        {
+            dataLayer.updateSubject(subject);
+            return true;
+        }
+
+        public bool UpdateAdmin(IAdmin admin)
+        {
+            dataLayer.updateAdmin(admin);
+            return true;
+        }
+
         private Model(IDataLayer _DataLayer)  // The constructor is private as its a singleton and I only allow one instance which is created with the GetInstance() method
         {
             dataLayer = _DataLayer;
