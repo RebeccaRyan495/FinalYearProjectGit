@@ -45,9 +45,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.listBoxSubjects = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelSelect = new System.Windows.Forms.Label();
             this.btnSelectSub = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.labelSelected = new System.Windows.Forms.Label();
+            this.btnClearSelection = new System.Windows.Forms.Button();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(951, 96);
+            this.panel1.Size = new System.Drawing.Size(982, 96);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -75,7 +78,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(471, 144);
+            this.label9.Location = new System.Drawing.Point(493, 184);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 20);
             this.label9.TabIndex = 40;
@@ -84,7 +87,7 @@
             // tbSubID
             // 
             this.tbSubID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbSubID.Location = new System.Drawing.Point(473, 167);
+            this.tbSubID.Location = new System.Drawing.Point(495, 207);
             this.tbSubID.Name = "tbSubID";
             this.tbSubID.ReadOnly = true;
             this.tbSubID.Size = new System.Drawing.Size(155, 26);
@@ -94,7 +97,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(469, 456);
+            this.label8.Location = new System.Drawing.Point(491, 496);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(127, 20);
             this.label8.TabIndex = 38;
@@ -103,7 +106,7 @@
             // tbCustName
             // 
             this.tbCustName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbCustName.Location = new System.Drawing.Point(473, 479);
+            this.tbCustName.Location = new System.Drawing.Point(495, 519);
             this.tbCustName.Multiline = true;
             this.tbCustName.Name = "tbCustName";
             this.tbCustName.Size = new System.Drawing.Size(237, 46);
@@ -113,7 +116,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(469, 347);
+            this.label7.Location = new System.Drawing.Point(491, 387);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 20);
             this.label7.TabIndex = 36;
@@ -122,7 +125,7 @@
             // tbSubAdd
             // 
             this.tbSubAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbSubAdd.Location = new System.Drawing.Point(473, 370);
+            this.tbSubAdd.Location = new System.Drawing.Point(495, 410);
             this.tbSubAdd.Multiline = true;
             this.tbSubAdd.Name = "tbSubAdd";
             this.tbSubAdd.Size = new System.Drawing.Size(352, 61);
@@ -132,7 +135,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(644, 274);
+            this.label6.Location = new System.Drawing.Point(666, 314);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 20);
             this.label6.TabIndex = 34;
@@ -141,7 +144,7 @@
             // tbPrevTest
             // 
             this.tbPrevTest.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbPrevTest.Location = new System.Drawing.Point(648, 297);
+            this.tbPrevTest.Location = new System.Drawing.Point(670, 337);
             this.tbPrevTest.Name = "tbPrevTest";
             this.tbPrevTest.Size = new System.Drawing.Size(177, 26);
             this.tbPrevTest.TabIndex = 33;
@@ -150,7 +153,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(469, 274);
+            this.label5.Location = new System.Drawing.Point(491, 314);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 20);
             this.label5.TabIndex = 32;
@@ -159,7 +162,7 @@
             // tbIncar
             // 
             this.tbIncar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbIncar.Location = new System.Drawing.Point(473, 297);
+            this.tbIncar.Location = new System.Drawing.Point(495, 337);
             this.tbIncar.Name = "tbIncar";
             this.tbIncar.Size = new System.Drawing.Size(155, 26);
             this.tbIncar.TabIndex = 31;
@@ -168,7 +171,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(644, 196);
+            this.label4.Location = new System.Drawing.Point(666, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 30;
@@ -177,7 +180,7 @@
             // tbLastName
             // 
             this.tbLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbLastName.Location = new System.Drawing.Point(648, 219);
+            this.tbLastName.Location = new System.Drawing.Point(670, 259);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(177, 26);
             this.tbLastName.TabIndex = 29;
@@ -186,7 +189,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(469, 196);
+            this.label3.Location = new System.Drawing.Point(491, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 28;
@@ -195,7 +198,7 @@
             // tbFirstName
             // 
             this.tbFirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbFirstName.Location = new System.Drawing.Point(473, 219);
+            this.tbFirstName.Location = new System.Drawing.Point(495, 259);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(155, 26);
             this.tbFirstName.TabIndex = 27;
@@ -205,39 +208,41 @@
             this.listBoxSubjects.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listBoxSubjects.FormattingEnabled = true;
             this.listBoxSubjects.ItemHeight = 20;
-            this.listBoxSubjects.Location = new System.Drawing.Point(46, 181);
+            this.listBoxSubjects.Location = new System.Drawing.Point(91, 207);
             this.listBoxSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxSubjects.Name = "listBoxSubjects";
-            this.listBoxSubjects.Size = new System.Drawing.Size(355, 344);
+            this.listBoxSubjects.Size = new System.Drawing.Size(283, 344);
             this.listBoxSubjects.TabIndex = 26;
+            this.listBoxSubjects.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjects_SelectedIndexChanged);
             // 
-            // label2
+            // labelSelect
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(20, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(405, 32);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "List of all subjects on system";
+            this.labelSelect.AutoSize = true;
+            this.labelSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelect.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelSelect.Location = new System.Drawing.Point(279, 124);
+            this.labelSelect.Name = "labelSelect";
+            this.labelSelect.Size = new System.Drawing.Size(405, 32);
+            this.labelSelect.TabIndex = 25;
+            this.labelSelect.Text = "List of all subjects on system";
             // 
             // btnSelectSub
             // 
             this.btnSelectSub.BackColor = System.Drawing.Color.Transparent;
             this.btnSelectSub.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSelectSub.Location = new System.Drawing.Point(714, 551);
+            this.btnSelectSub.Location = new System.Drawing.Point(736, 591);
             this.btnSelectSub.Name = "btnSelectSub";
             this.btnSelectSub.Size = new System.Drawing.Size(155, 41);
             this.btnSelectSub.TabIndex = 41;
             this.btnSelectSub.Text = "Select Subject";
             this.btnSelectSub.UseVisualStyleBackColor = false;
+            this.btnSelectSub.Click += new System.EventHandler(this.btnSelectSub_Click);
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBack.Location = new System.Drawing.Point(475, 551);
+            this.btnBack.Location = new System.Drawing.Point(91, 591);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(155, 41);
             this.btnBack.TabIndex = 42;
@@ -245,12 +250,50 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // labelSelected
+            // 
+            this.labelSelected.AutoSize = true;
+            this.labelSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelected.ForeColor = System.Drawing.Color.Red;
+            this.labelSelected.Location = new System.Drawing.Point(206, 124);
+            this.labelSelected.Name = "labelSelected";
+            this.labelSelected.Size = new System.Drawing.Size(594, 32);
+            this.labelSelected.TabIndex = 43;
+            this.labelSelected.Text = "Subject Selected - Please Edit or Continue";
+            // 
+            // btnClearSelection
+            // 
+            this.btnClearSelection.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearSelection.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClearSelection.Location = new System.Drawing.Point(736, 591);
+            this.btnClearSelection.Name = "btnClearSelection";
+            this.btnClearSelection.Size = new System.Drawing.Size(155, 41);
+            this.btnClearSelection.TabIndex = 44;
+            this.btnClearSelection.Text = "Clear Selection";
+            this.btnClearSelection.UseVisualStyleBackColor = false;
+            this.btnClearSelection.Click += new System.EventHandler(this.btnClearSelection_Click);
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.BackColor = System.Drawing.Color.Transparent;
+            this.btnContinue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnContinue.Location = new System.Drawing.Point(497, 591);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(155, 41);
+            this.btnContinue.TabIndex = 45;
+            this.btnContinue.Text = "Continue";
+            this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            // 
             // FormExamSelectSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(951, 629);
+            this.ClientSize = new System.Drawing.Size(982, 674);
+            this.Controls.Add(this.btnContinue);
+            this.Controls.Add(this.btnClearSelection);
+            this.Controls.Add(this.labelSelected);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSelectSub);
             this.Controls.Add(this.label9);
@@ -268,11 +311,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.listBoxSubjects);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelSelect);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Name = "FormExamSelectSubject";
             this.Text = "FormExamSelectSubject";
+            this.Load += new System.EventHandler(this.FormExamSelectSubject_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -299,8 +343,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.ListBox listBoxSubjects;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelSelect;
         private System.Windows.Forms.Button btnSelectSub;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label labelSelected;
+        private System.Windows.Forms.Button btnClearSelection;
+        private System.Windows.Forms.Button btnContinue;
     }
 }

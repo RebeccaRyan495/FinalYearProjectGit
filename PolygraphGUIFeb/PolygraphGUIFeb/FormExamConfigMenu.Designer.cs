@@ -112,6 +112,7 @@
             this.btnConfigQuestions.TabIndex = 6;
             this.btnConfigQuestions.Text = "Select Questions";
             this.btnConfigQuestions.UseVisualStyleBackColor = true;
+            this.btnConfigQuestions.Click += new System.EventHandler(this.btnConfigQuestions_Click);
             // 
             // label5
             // 

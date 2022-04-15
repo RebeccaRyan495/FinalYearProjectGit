@@ -35,5 +35,10 @@ namespace PolygraphGUIFeb
             fmm.ShowDialog();
             this.Close();
         }
+
+        private void btnConfigQuestions_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

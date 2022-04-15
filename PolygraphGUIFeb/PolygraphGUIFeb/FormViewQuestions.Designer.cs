@@ -67,6 +67,7 @@
             this.label2.Size = new System.Drawing.Size(424, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "List of all questions on system";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // listBoxQuestions
             // 
@@ -128,5 +129,6 @@
         private System.Windows.Forms.ListBox listBoxQuestions;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+
     }
 }

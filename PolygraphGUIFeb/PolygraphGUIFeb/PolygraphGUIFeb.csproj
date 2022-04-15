@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
     <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604" />
@@ -74,11 +78,11 @@
     <Compile Include="FormAddSubject.Designer.cs">
       <DependentUpon>FormAddSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormConfigSubject.cs">
+    <Compile Include="----FormConfigSubject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormConfigSubject.Designer.cs">
-      <DependentUpon>FormConfigSubject.cs</DependentUpon>
+    <Compile Include="----FormConfigSubject.Designer.cs">
+      <DependentUpon>----FormConfigSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="FormConfirmAddSubject.cs">
       <SubType>Form</SubType>
@@ -103,6 +107,18 @@
     </Compile>
     <Compile Include="FormExamConfigMenu.Designer.cs">
       <DependentUpon>FormExamConfigMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExamReviewAndBegin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExamReviewAndBegin.Designer.cs">
+      <DependentUpon>FormExamReviewAndBegin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExamSelectQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExamSelectQuestion.Designer.cs">
+      <DependentUpon>FormExamSelectQuestion.cs</DependentUpon>
     </Compile>
     <Compile Include="FormExamSelectSubject.cs">
       <SubType>Form</SubType>
@@ -150,8 +166,8 @@
     <EmbeddedResource Include="FormAddSubject.resx">
       <DependentUpon>FormAddSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormConfigSubject.resx">
-      <DependentUpon>FormConfigSubject.cs</DependentUpon>
+    <EmbeddedResource Include="----FormConfigSubject.resx">
+      <DependentUpon>----FormConfigSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfirmAddSubject.resx">
       <DependentUpon>FormConfirmAddSubject.cs</DependentUpon>
@@ -167,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormExamConfigMenu.resx">
       <DependentUpon>FormExamConfigMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExamReviewAndBegin.resx">
+      <DependentUpon>FormExamReviewAndBegin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExamSelectQuestion.resx">
+      <DependentUpon>FormExamSelectQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormExamSelectSubject.resx">
       <DependentUpon>FormExamSelectSubject.cs</DependentUpon>

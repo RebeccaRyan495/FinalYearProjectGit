@@ -21,7 +21,7 @@ namespace PolygraphGUIFeb
             InitializeComponent();
             Model = _Model;
         }
-
+         
         private void listBoxQuestions_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -55,6 +55,11 @@ namespace PolygraphGUIFeb
             FormAddCustomQuestion f = new FormAddCustomQuestion(Model);
             f.ShowDialog();
             this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

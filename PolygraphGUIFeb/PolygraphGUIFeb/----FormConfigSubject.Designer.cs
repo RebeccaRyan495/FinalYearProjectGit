@@ -58,6 +58,7 @@
             this.btnSelectSub.TabIndex = 38;
             this.btnSelectSub.Text = "Select Subject";
             this.btnSelectSub.UseVisualStyleBackColor = true;
+            this.btnSelectSub.Click += new System.EventHandler(this.btnSelectSub_Click);
             // 
             // label8
             // 
