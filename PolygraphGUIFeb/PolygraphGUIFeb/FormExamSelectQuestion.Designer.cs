@@ -40,6 +40,7 @@
             this.lbSelected = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDeselect = new System.Windows.Forms.Button();
+            this.btnDebug = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,6 +144,7 @@
             this.lbSelected.Name = "lbSelected";
             this.lbSelected.Size = new System.Drawing.Size(339, 344);
             this.lbSelected.TabIndex = 43;
+            this.lbSelected.SelectedIndexChanged += new System.EventHandler(this.lbSelected_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -164,12 +166,23 @@
             this.btnDeselect.UseVisualStyleBackColor = true;
             this.btnDeselect.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnDebug
+            // 
+            this.btnDebug.Location = new System.Drawing.Point(424, 547);
+            this.btnDebug.Name = "btnDebug";
+            this.btnDebug.Size = new System.Drawing.Size(76, 41);
+            this.btnDebug.TabIndex = 46;
+            this.btnDebug.Text = "debug";
+            this.btnDebug.UseVisualStyleBackColor = true;
+            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
+            // 
             // FormExamSelectQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(931, 624);
+            this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnDeselect);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbSelected);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.ListBox lbSelected;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDeselect;
+        private System.Windows.Forms.Button btnDebug;
     }
 }

@@ -50,8 +50,9 @@ namespace PolygraphGUIFeb
             listBoxQuestions.Items.Clear();
             Model.GetAllQuestions();
             btnContinue.Hide();
+            btnDebug.Hide();
 
-            foreach (IQuestion question in Model.QuestionList)
+            foreach (IQuestion question in Model.QuestionList)              //adds all questions upon loading form
             {
                 String str = "";
                 str += question.AQuestion;
@@ -62,7 +63,7 @@ namespace PolygraphGUIFeb
 
         private void listBoxQuestions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Question q in Model.QuestionList)
+            foreach (Question q in Model.QuestionList)                  //outputs ID of question
             {
                 string text = listBoxQuestions.GetItemText(listBoxQuestions.SelectedItem); //gets the text in the list box
                 if (text == q.AQuestion.ToString())
@@ -70,34 +71,33 @@ namespace PolygraphGUIFeb
                     tbSubID.Text = q.QuestionID.ToString();
                 }
 
-
             }
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            foreach (Question q in Model.QuestionList)
+            foreach (Question q in Model.QuestionList)      //compares each question in Model's list to whats in listbox (populated from above) basically, does it exist?
             {
                 string text = listBoxQuestions.GetItemText(listBoxQuestions.SelectedItem); //gets the text in the list box
-                //MessageBox.Show(text); ------DEBUGGING--------
-                //MessageBox.Show("LOOPING ALL QUESTIONS  "+ q.AQuestion);
-                //the fields are matching, should work, issue with list instead
-                if (text == q.AQuestion.ToString())
+                if (text == q.AQuestion.ToString())             //if there is a match between whats in list box and whats in Model
                 {
-                    questions.Add(q.QuestionID);
-                    questions.Add(q.AQuestion);
+                    questions.Add(q.QuestionID);                //model's question ID is added to Questions list
+                    questions.Add(q.AQuestion);                 //model's question string is added to Questions list
 
                     String selectedStr = "";
                     selectedStr += q.AQuestion;
                     lbSelected.Items.Add(selectedStr);
-                    listBoxQuestions.Items.Remove(q.AQuestion);
-                    subAndQuestions.Add(questions.ToString());
+                    listBoxQuestions.Items.Remove(q.AQuestion);     //adds and takes away questions from each box
+
+
+                    subAndQuestions.AddRange(questions);        //addRange allows for a second list to be passed into first and iterated over
                     //added question list into SubAndQuestion list to be passed to Review form
 
                 }
 
             }
             btnContinue.Show();
+            btnDebug.Show();
 
         }
 
@@ -116,7 +116,7 @@ namespace PolygraphGUIFeb
                 string text = lbSelected.GetItemText(lbSelected.SelectedItem); //gets the text in the list box
                 //MessageBox.Show(text); ------DEBUGGING--------
                 //MessageBox.Show("LOOPING ALL QUESTIONS  "+ q.AQuestion);
-                //the fields are matching, should work, issue with list instead
+                //the fields are matching, should work, issue with list instead - fixed
                 if (text == q.AQuestion.ToString())
                 {
                     questions.Remove(q.QuestionID);
@@ -131,6 +131,36 @@ namespace PolygraphGUIFeb
 
             }
             btnContinue.Hide();
+        }
+
+        private void lbSelected_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Question q in Model.QuestionList)
+            {
+                string text = lbSelected.GetItemText(lbSelected.SelectedItem); //gets the text in the list box
+                if (text == q.AQuestion.ToString())
+                {
+                    tbSubID.Text = q.QuestionID.ToString();
+                }
+
+
+            }
+        }
+
+        private void btnDebug_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(questions[0]);
+            MessageBox.Show(questions[1]);
+            MessageBox.Show(questions[2]);
+            MessageBox.Show(questions[3]);
+            MessageBox.Show(questions[4]);
+            MessageBox.Show(questions[5]);
+
+            for (int i = 0; i < subAndQuestions.Count; i++)
+            {
+                MessageBox.Show("NOW USING SUBANDQ" + subAndQuestions[i]);
+            }
+
         }
     }
 }

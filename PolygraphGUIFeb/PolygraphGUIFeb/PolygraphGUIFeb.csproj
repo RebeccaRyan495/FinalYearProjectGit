@@ -46,6 +46,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -101,6 +102,12 @@
     </Compile>
     <Compile Include="FormEditSubject.Designer.cs">
       <DependentUpon>FormEditSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExamBegin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExamBegin.Designer.cs">
+      <DependentUpon>FormExamBegin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormExamConfigMenu.cs">
       <SubType>Form</SubType>
@@ -181,6 +188,9 @@
     <EmbeddedResource Include="FormEditSubject.resx">
       <DependentUpon>FormEditSubject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormExamBegin.resx">
+      <DependentUpon>FormExamBegin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormExamConfigMenu.resx">
       <DependentUpon>FormExamConfigMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +224,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="polygraphdbDataSet.xsc">
       <DependentUpon>polygraphdbDataSet.xsd</DependentUpon>
     </None>
