@@ -90,7 +90,7 @@ namespace PolygraphGUIFeb
                     listBoxQuestions.Items.Remove(q.AQuestion);     //adds and takes away questions from each box
 
 
-                    subAndQuestions.AddRange(questions);        //addRange allows for a second list to be passed into first and iterated over
+                    //subAndQuestions.AddRange(questions);        //addRange allows for a second list to be passed into first and iterated over
                     //added question list into SubAndQuestion list to be passed to Review form
 
                 }
@@ -104,7 +104,7 @@ namespace PolygraphGUIFeb
         private void btnContinue_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormExamReviewAndBegin fff = new FormExamReviewAndBegin(Model, subAndQuestions);
+            FormExamReviewAndBegin fff = new FormExamReviewAndBegin(Model, subAndQuestions, questions);
             fff.ShowDialog();
             this.Close();
         }
@@ -147,7 +147,7 @@ namespace PolygraphGUIFeb
             }
         }
 
-        private void btnDebug_Click(object sender, EventArgs e)
+        private void btnDebug_Click(object sender, EventArgs e)     //hidden in application, just testing output of each list
         {
             MessageBox.Show(questions[0]);
             MessageBox.Show(questions[1]);
@@ -158,7 +158,7 @@ namespace PolygraphGUIFeb
 
             for (int i = 0; i < subAndQuestions.Count; i++)
             {
-                MessageBox.Show("NOW USING SUBANDQ" + subAndQuestions[i]);
+                MessageBox.Show("NOW USING SUBANDQ   " + subAndQuestions[i]);
             }
 
         }

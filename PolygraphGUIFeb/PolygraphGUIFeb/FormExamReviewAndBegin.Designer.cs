@@ -41,6 +41,7 @@ namespace PolygraphGUIFeb
             this.label5 = new System.Windows.Forms.Label();
             this.lbSelectedQs = new System.Windows.Forms.ListBox();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnDebug = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +91,7 @@ namespace PolygraphGUIFeb
             // 
             this.subID.Location = new System.Drawing.Point(113, 202);
             this.subID.Name = "subID";
+            this.subID.ReadOnly = true;
             this.subID.Size = new System.Drawing.Size(100, 26);
             this.subID.TabIndex = 10;
             // 
@@ -97,6 +99,7 @@ namespace PolygraphGUIFeb
             // 
             this.subFirstName.Location = new System.Drawing.Point(298, 202);
             this.subFirstName.Name = "subFirstName";
+            this.subFirstName.ReadOnly = true;
             this.subFirstName.Size = new System.Drawing.Size(100, 26);
             this.subFirstName.TabIndex = 11;
             // 
@@ -104,6 +107,7 @@ namespace PolygraphGUIFeb
             // 
             this.subLastName.Location = new System.Drawing.Point(494, 202);
             this.subLastName.Name = "subLastName";
+            this.subLastName.ReadOnly = true;
             this.subLastName.Size = new System.Drawing.Size(100, 26);
             this.subLastName.TabIndex = 12;
             // 
@@ -160,12 +164,23 @@ namespace PolygraphGUIFeb
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
+            // btnDebug
+            // 
+            this.btnDebug.Location = new System.Drawing.Point(464, 366);
+            this.btnDebug.Name = "btnDebug";
+            this.btnDebug.Size = new System.Drawing.Size(114, 33);
+            this.btnDebug.TabIndex = 18;
+            this.btnDebug.Text = "Debug";
+            this.btnDebug.UseVisualStyleBackColor = true;
+            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
+            // 
             // FormExamReviewAndBegin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(767, 465);
+            this.Controls.Add(this.btnDebug);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lbSelectedQs);
             this.Controls.Add(this.label5);
@@ -201,5 +216,6 @@ namespace PolygraphGUIFeb
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lbSelectedQs;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnDebug;
     }
 }

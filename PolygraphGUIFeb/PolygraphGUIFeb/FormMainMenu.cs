@@ -51,7 +51,7 @@ namespace PolygraphGUIFeb
         private void btnExamConfig_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Configuration fecm = new Configuration(Model);
+            FormExamSelectSubject fecm = new FormExamSelectSubject(Model);
             fecm.ShowDialog();
             this.Close();
 

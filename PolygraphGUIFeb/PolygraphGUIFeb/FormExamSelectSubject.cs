@@ -25,8 +25,8 @@ namespace PolygraphGUIFeb
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Configuration c = new Configuration(Model);
-            c.ShowDialog();
+            FormMainMenu fmm = new FormMainMenu(Model);
+            fmm.ShowDialog();
             this.Close();
 
         }

@@ -33,7 +33,12 @@ namespace PolygraphGUIFeb
             this.label1 = new System.Windows.Forms.Label();
             this.pleaseConfirm = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.examCountInfo = new System.Windows.Forms.Label();
+            this.labelWelcome1 = new System.Windows.Forms.Label();
+            this.labelWelcome2 = new System.Windows.Forms.Label();
+            this.labelWelcome3 = new System.Windows.Forms.Label();
+            this.labelWelcome4 = new System.Windows.Forms.Label();
+            this.lbExamEvents = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +76,7 @@ namespace PolygraphGUIFeb
             // btnConfirm
             // 
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(397, 188);
+            this.btnConfirm.Location = new System.Drawing.Point(386, 149);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(118, 39);
             this.btnConfirm.TabIndex = 10;
@@ -79,24 +84,82 @@ namespace PolygraphGUIFeb
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // examCountInfo
+            // labelWelcome1
             // 
-            this.examCountInfo.AutoSize = true;
-            this.examCountInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.examCountInfo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.examCountInfo.Location = new System.Drawing.Point(223, 114);
-            this.examCountInfo.Name = "examCountInfo";
-            this.examCountInfo.Size = new System.Drawing.Size(462, 32);
-            this.examCountInfo.TabIndex = 11;
-            this.examCountInfo.Text = "Examination begins in 5 seconds";
+            this.labelWelcome1.AutoSize = true;
+            this.labelWelcome1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelWelcome1.Location = new System.Drawing.Point(223, 114);
+            this.labelWelcome1.Name = "labelWelcome1";
+            this.labelWelcome1.Size = new System.Drawing.Size(464, 29);
+            this.labelWelcome1.TabIndex = 11;
+            this.labelWelcome1.Text = "Welcome to the polygraph examination";
+            // 
+            // labelWelcome2
+            // 
+            this.labelWelcome2.AutoSize = true;
+            this.labelWelcome2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelWelcome2.Location = new System.Drawing.Point(155, 146);
+            this.labelWelcome2.Name = "labelWelcome2";
+            this.labelWelcome2.Size = new System.Drawing.Size(629, 29);
+            this.labelWelcome2.TabIndex = 12;
+            this.labelWelcome2.Text = "You will be asked a series of \"Yes\" or \"No\" questions";
+            // 
+            // labelWelcome3
+            // 
+            this.labelWelcome3.AutoSize = true;
+            this.labelWelcome3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelWelcome3.Location = new System.Drawing.Point(244, 175);
+            this.labelWelcome3.Name = "labelWelcome3";
+            this.labelWelcome3.Size = new System.Drawing.Size(461, 29);
+            this.labelWelcome3.TabIndex = 13;
+            this.labelWelcome3.Text = "Please answer with \"Yes\" or \"No\" only.";
+            // 
+            // labelWelcome4
+            // 
+            this.labelWelcome4.AutoSize = true;
+            this.labelWelcome4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelWelcome4.Location = new System.Drawing.Point(263, 204);
+            this.labelWelcome4.Name = "labelWelcome4";
+            this.labelWelcome4.Size = new System.Drawing.Size(424, 29);
+            this.labelWelcome4.TabIndex = 14;
+            this.labelWelcome4.Text = "Do you consent to the examination?";
+            // 
+            // lbExamEvents
+            // 
+            this.lbExamEvents.FormattingEnabled = true;
+            this.lbExamEvents.ItemHeight = 20;
+            this.lbExamEvents.Location = new System.Drawing.Point(133, 278);
+            this.lbExamEvents.Name = "lbExamEvents";
+            this.lbExamEvents.Size = new System.Drawing.Size(340, 304);
+            this.lbExamEvents.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(263, 233);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(424, 29);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Do you consent to the examination?";
             // 
             // FormExamBegin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(930, 519);
-            this.Controls.Add(this.examCountInfo);
+            this.ClientSize = new System.Drawing.Size(929, 623);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbExamEvents);
+            this.Controls.Add(this.labelWelcome4);
+            this.Controls.Add(this.labelWelcome3);
+            this.Controls.Add(this.labelWelcome2);
+            this.Controls.Add(this.labelWelcome1);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.pleaseConfirm);
             this.Controls.Add(this.panel1);
@@ -116,6 +179,11 @@ namespace PolygraphGUIFeb
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label pleaseConfirm;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Label examCountInfo;
+        private System.Windows.Forms.Label labelWelcome1;
+        private System.Windows.Forms.Label labelWelcome2;
+        private System.Windows.Forms.Label labelWelcome3;
+        private System.Windows.Forms.Label labelWelcome4;
+        private System.Windows.Forms.ListBox lbExamEvents;
+        private System.Windows.Forms.Label label2;
     }
 }
