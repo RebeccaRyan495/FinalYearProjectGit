@@ -38,7 +38,6 @@ namespace PolygraphGUIFeb
             this.labelWelcome3 = new System.Windows.Forms.Label();
             this.labelWelcome4 = new System.Windows.Forms.Label();
             this.lbExamEvents = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,9 +123,9 @@ namespace PolygraphGUIFeb
             this.labelWelcome4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelWelcome4.Location = new System.Drawing.Point(263, 204);
             this.labelWelcome4.Name = "labelWelcome4";
-            this.labelWelcome4.Size = new System.Drawing.Size(424, 29);
+            this.labelWelcome4.Size = new System.Drawing.Size(429, 29);
             this.labelWelcome4.TabIndex = 14;
-            this.labelWelcome4.Text = "Do you consent to the examination?";
+            this.labelWelcome4.Text = "Do you consent to this examination?";
             // 
             // lbExamEvents
             // 
@@ -134,19 +133,8 @@ namespace PolygraphGUIFeb
             this.lbExamEvents.ItemHeight = 20;
             this.lbExamEvents.Location = new System.Drawing.Point(133, 278);
             this.lbExamEvents.Name = "lbExamEvents";
-            this.lbExamEvents.Size = new System.Drawing.Size(340, 304);
+            this.lbExamEvents.Size = new System.Drawing.Size(503, 304);
             this.lbExamEvents.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(263, 233);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(424, 29);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Do you consent to the examination?";
             // 
             // FormExamBegin
             // 
@@ -154,7 +142,6 @@ namespace PolygraphGUIFeb
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(929, 623);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbExamEvents);
             this.Controls.Add(this.labelWelcome4);
             this.Controls.Add(this.labelWelcome3);
@@ -184,6 +171,5 @@ namespace PolygraphGUIFeb
         private System.Windows.Forms.Label labelWelcome3;
         private System.Windows.Forms.Label labelWelcome4;
         private System.Windows.Forms.ListBox lbExamEvents;
-        private System.Windows.Forms.Label label2;
     }
 }
