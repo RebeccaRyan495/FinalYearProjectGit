@@ -22,6 +22,7 @@ namespace ModelLayer
         //private Admin admin;
         private List<IAdmin> adminList;
         private List<ISubject> subjectList;
+        private List<IDataDevice> datadeviceList;
         private List<IQuestion> questionList;
         #endregion
 
@@ -41,6 +42,18 @@ namespace ModelLayer
             set
             {
                 adminList = value;
+            }
+        }
+
+        public List<IDataDevice> DataDeviceList
+        {
+            get
+            {
+                return datadeviceList;
+            }
+            set
+            {
+                datadeviceList = value;
             }
         }
 
@@ -173,6 +186,12 @@ namespace ModelLayer
         public void GetAllAdmin()
         {
             AdminList = dataLayer.getAllAdmin();
+
+        }
+
+        public void GetAllDataDevice()
+        {
+            DataDeviceList= dataLayer.getAllData();
 
         }
 

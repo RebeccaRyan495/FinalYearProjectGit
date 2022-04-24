@@ -135,6 +135,7 @@ namespace PolygraphGUIFeb
             this.lbExamEvents.Name = "lbExamEvents";
             this.lbExamEvents.Size = new System.Drawing.Size(503, 304);
             this.lbExamEvents.TabIndex = 15;
+            this.lbExamEvents.SelectedIndexChanged += new System.EventHandler(this.lbExamEvents_SelectedIndexChanged);
             // 
             // FormExamBegin
             // 

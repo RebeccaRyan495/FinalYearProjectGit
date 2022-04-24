@@ -18,6 +18,7 @@ namespace ModelLayer
         List<IQuestion> QuestionList { get; set; }
 
         void GetAllSubjects();
+        void GetAllDataDevice();
         void GetAllQuestions();
         bool deleteSubject(ISubject subject);
 

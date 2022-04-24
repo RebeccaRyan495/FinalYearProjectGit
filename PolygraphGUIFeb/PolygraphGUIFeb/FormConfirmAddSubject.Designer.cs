@@ -77,6 +77,7 @@
             this.btnSubmit.TabIndex = 25;
             this.btnSubmit.Text = "Confirm";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnBack
             // 

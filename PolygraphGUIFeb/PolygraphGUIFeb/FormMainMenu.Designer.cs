@@ -144,7 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "FormMainMenu";
-            this.Text = "FormMainMenu";
+            this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

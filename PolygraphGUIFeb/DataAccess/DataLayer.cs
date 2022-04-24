@@ -21,12 +21,12 @@ namespace DataAccess
         SqlCommandBuilder cb;
         #endregion
 
-        private static IDataLayer dataLayerSingletonInstance;  // DataLayer object is a singleton so only one instance allowed
+        private static IDataLayer dataLayerSingletonInstance;  // DataLayer object is a singleton
         static readonly object padlock = new object();
 
-        public static IDataLayer GetInstance() // With Singleton pattern this method is used rather than constructor
+        public static IDataLayer GetInstance()
         {
-            lock (padlock) //   only one thread can entry this block of code
+            lock (padlock) 
             {
                 if (dataLayerSingletonInstance == null)
                 {
@@ -223,6 +223,49 @@ namespace DataAccess
 
 
             return questionList;
+
+        }
+
+        public virtual List<IDataDevice> getAllData()
+        {
+            List<IDataDevice> ddList = new List<IDataDevice>();
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From DataDevice";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "DataDeviceData");
+                maxRows = ds.Tables["DataDeviceData"].Rows.Count;
+                for (int i = 0; i < maxRows; i++)
+                {
+                    DataRow dRow = ds.Tables["DataDeviceData"].Rows[i];
+                    IDataDevice dd = DataDeviceMethods.GetDataDevice(dRow.ItemArray.GetValue(0).ToString(),
+                                                                    dRow.ItemArray.GetValue(1).ToString(),
+                                                                    dRow.ItemArray.GetValue(2).ToString(),
+                                                                    dRow.ItemArray.GetValue(3).ToString(),
+                                                                    dRow.ItemArray.GetValue(4).ToString(),
+                                                                    dRow.ItemArray.GetValue(5).ToString());
+                    ddList.Add(dd);
+                    //MessageBox.Show(user.Username + user.Password);
+
+                    //textBoxName.Select();
+                }
+
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+
+
+
+            return ddList;
 
         }
 

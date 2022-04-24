@@ -16,6 +16,16 @@ namespace BusinessEntities
         private string values;
         private string dateGathered;
         private string timeGathered;
+
+        public DataDevice(string deviceID, string deviceType, string deviceName, string value, string dateGathered, string timeGathered)
+        {
+            this.deviceID = deviceID;
+            this.deviceType = deviceType;
+            this.deviceName = deviceName;
+            Value = value;
+            this.dateGathered = dateGathered;
+            this.timeGathered = timeGathered;
+        }
         #endregion
 
         public string DeviceID

@@ -16,10 +16,12 @@ namespace DataAccess
         List<IAdmin> getAllAdmin();
         List<IQuestion> getAllQuestions();
         List<ISubject> getAllSubjects();
+        List<IDataDevice> getAllData();
         void addSubject(ISubject subject);
         void addQuestion(IQuestion question);
         bool deleteSubject(ISubject subject);
         bool updateSubject(ISubject subject);
         bool updateAdmin(IAdmin admin);
+        
     }
 }
